@@ -1,6 +1,5 @@
 package creational.singleton;
 
-import creational.singleton.enumerated.Singleton;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
@@ -16,7 +15,7 @@ public class SingletonTest {
     @ValueSource(classes = {
             creational.singleton.generic.Singleton.class,
             creational.singleton.holder.Singleton.class,
-            Singleton.class
+            creational.singleton.enumerated.Singleton.class
     })
     public void testSingleton(Class<? extends ISingleton> clazz)
             throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
